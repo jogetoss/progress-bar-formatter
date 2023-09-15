@@ -32,7 +32,7 @@ public class ProgressBarFormatter extends DataListColumnFormatDefault {
             html.append("\"><div class=\"progress-bar progress-bar-striped\" role=\"progressbar\" aria-valuenow=\"" 
             + columnValue + "\" aria-valuemin=\"" + minValue + "\" aria-valuemax=\"" + maxValue + "\" style=\"width:" + percentValue + "%;");
 
-            if (bgColor != null && !bgColor.isEmpty()) {
+            if (pbColor != null && !pbColor.isEmpty()) {
                 html.append("background-color:" + pbColor + ";");
             }
             if (fontColor != null && !fontColor.isEmpty()) {
