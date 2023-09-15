@@ -1,15 +1,70 @@
 [
     {
-        title:'@@org.joget.marketplace.progressbarformatter.config@@',
-        properties:[
+        "title": "@@org.joget.marketplace.progressbarformatter.config@@",
+        "properties": [
             {
-                name:'maxValue',
-                label:'@@org.joget.marketplace.progressbarformatter.maxValue@@',
-                type:'textfield',
-                required : 'True',
-                regex_validation: '^[0-9]*$',
-                validation_message: '@@org.joget.marketplace.progressbarformatter.invalid@@'
+                "label": "@@org.joget.marketplace.progressbarformatter.data@@",
+                "type": "header"
+            },
+            {
+                "name": "minValue",
+                "label": "@@org.joget.marketplace.progressbarformatter.minValue@@",
+                "type": "textfield",
+                "required": "True",
+                "regex_validation": "^[0-9]*$",
+                "validation_message": "@@org.joget.marketplace.progressbarformatter.invalid@@"
+            },
+            {
+                "name": "maxValue",
+                "label": "@@org.joget.marketplace.progressbarformatter.maxValue@@",
+                "type": "textfield",
+                "required": "True",
+                "regex_validation": "^[0-9]*$",
+                "validation_message": "@@org.joget.marketplace.progressbarformatter.invalid@@"
+            },
+            {
+                "label": "@@org.joget.marketplace.progressbarformatter.styling@@",
+                "type": "header"
+            },
+            {
+                "name": "bgColor",
+                "label": "@@org.joget.marketplace.progressbarformatter.bgColor@@",
+                "type": "color"
+            },
+            {
+                "name": "pbColor",
+                "label": "@@org.joget.marketplace.progressbarformatter.pbColor@@",
+                "type": "color"
+            },
+            {
+                "name": "fontColor",
+                "label": "@@org.joget.marketplace.progressbarformatter.fontColor@@",
+                "type": "color"
+            },
+            {
+                "name": "hideNum",
+                "label": "@@org.joget.marketplace.progressbarformatter.hideNum@@",
+                "type": "checkbox",
+                "options": [
+                    {
+                        "value": "true",
+                        "label": ""
+                    }
+                ]
+            },
+            {
+                "name": "showPercentage",
+                "label": "@@org.joget.marketplace.progressbarformatter.showPercentage@@",
+                "type": "checkbox",
+                "options": [
+                    {
+                        "value": "true",
+                        "label": ""
+                    }
+                ]
             }
         ]
     }
 ]
+
+ 
