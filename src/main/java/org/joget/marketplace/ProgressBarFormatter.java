@@ -18,12 +18,14 @@ public class ProgressBarFormatter extends DataListColumnFormatDefault {
         String hideNum = getPropertyString("hideNum");
         String showPercentage = getPropertyString("showPercentage");
         Integer percentValue = 100;
-        if(Integer.valueOf(columnValue) <= Integer.valueOf(maxValue)){
-            percentValue = (Integer.valueOf(columnValue) * 100 / (Integer.valueOf(maxValue) - Integer.valueOf(minValue)));
-        }
 
-        StringBuilder html = new StringBuilder();
         if (columnValue != null && !columnValue.isEmpty()) {
+            if(Integer.valueOf(columnValue) <= Integer.valueOf(maxValue)){
+                percentValue = (Integer.valueOf(columnValue) * 100 / (Integer.valueOf(maxValue) - Integer.valueOf(minValue)));
+            }
+
+            StringBuilder html = new StringBuilder();
+     
             html.append("<div class=\"progress\"");
             if (bgColor != null && !bgColor.isEmpty()) {
               html.append(" style=\"background-color:" + bgColor);
@@ -51,7 +53,7 @@ public class ProgressBarFormatter extends DataListColumnFormatDefault {
 
             return html.toString();
         }
-        return (String) value;
+        return columnValue;
     }
 
     @Override
@@ -61,7 +63,7 @@ public class ProgressBarFormatter extends DataListColumnFormatDefault {
 
     @Override
     public String getVersion() {
-        return "7.0.1";
+        return "7.0.2";
     }
 
     @Override
